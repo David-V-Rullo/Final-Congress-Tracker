@@ -1,12 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import Home from './pages/Home';
-import Matchup from './pages/Matchup';
-import Vote from './pages/Vote';
-import NotFound from './pages/NotFound';
+import logo from './logo.svg';
+import './App.css';
+import 'semantic-ui-css/semantic.min.css'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import PageHead from "./Components/PageHead"
+import Navigation from './Components/Navigation';
 
-const client = new ApolloClient({
-  uri: '/graphql',
-  cache: new InMemoryCache(),
-});
+
+function App() {
+  return (
+    <div>
+    <PageHead />
+    <Navigation />
+    <Router>
+      
+    </Router>
+    </div>
+  );
+}
+
+export default App;
